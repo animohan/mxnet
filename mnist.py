@@ -67,8 +67,10 @@ def readmnist(path):
     imgs, labels = parse_data(path,'train', flatten = True)
     test_imgs,test_labels= parse_data(path, "t10k", flatten = True)
 
+    
     indices = np.random.permutation(labels.shape[0])
     train_imgs = imgs[indices]
     train_labels = labels[indices]
-
+    
+    
     return train_imgs, train_labels,test_imgs, test_labels
